@@ -1,0 +1,7 @@
+<h2>User Details: {{userId}}</h2>
+<div *ngIf="user$ | async as user; else loading">
+{{user.name}}
+</div>
+<ng-template #loading>
+Loading...
+</ng-template>
